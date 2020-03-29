@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Header from './components/Header/Header';
 import CharacterSearch from './components/CharacterSearch/CharacterSearch';
 
 import './App.css';
@@ -7,7 +8,8 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-      <CharacterSearch />
+      <Header />
+      {/* <CharacterSearch /> */}
     </div>
   );
 }
