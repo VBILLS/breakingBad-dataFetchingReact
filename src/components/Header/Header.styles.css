@@ -55,3 +55,7 @@
   background-color: #367849;
   height: 80px;
 }
+
+.charlinks-ul {
+  list-style: none;
+}

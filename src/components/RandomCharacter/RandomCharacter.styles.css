@@ -3,6 +3,7 @@
   color: rgb(253, 255, 235);
   min-height: 350px;
   min-width: 275px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,10 +17,18 @@
 }
 
 .rc-img {
+  position: relative;
   border-radius: 10px;
-  display: block;
-  max-height: 75%;
-  max-width: 50%;
+  height: 300px;
+  width: auto;
+  overflow: hidden;
+  object-fit: scale-down;
+}
+
+.rc-img img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .rc-info {

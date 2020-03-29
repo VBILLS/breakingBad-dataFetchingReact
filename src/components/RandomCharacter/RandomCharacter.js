@@ -30,8 +30,9 @@ function RandomCharacter() {
   return (
     <div className='RandomCharacter-card'>
       <h1 className='rc-Name'>{name}</h1>
-      <img className='rc-img' src={imgsrc} alt='chacter' width='400px' />
-
+      <div className='rc-img'>
+        <img className='rc-img' src={imgsrc} alt='chacter' width='400px' />
+      </div>
       <div className='rc-info'>
         <p className='rc-occ'>
           Occupation:<span>{occ}</span>

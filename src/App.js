@@ -1,7 +1,9 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import CharacterSearch from './components/CharacterSearch/CharacterSearch';
+import RandomCharacter from './components/RandomCharacter/RandomCharacter';
 
 import './App.css';
 
@@ -9,7 +11,10 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      {/* <CharacterSearch /> */}
+      <Switch>
+        <Route exact path='/characters/search' component={CharacterSearch} />
+        <Route exact path='/characters/random' component={RandomCharacter} />
+      </Switch>
     </div>
   );
 }
