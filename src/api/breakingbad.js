@@ -16,5 +16,5 @@ async function fetchCharacterData(url) {
 // }
 
 module.exports = {
-  fetchCharacterData
+  fetchCharacterData: fetchCharacterData
 };

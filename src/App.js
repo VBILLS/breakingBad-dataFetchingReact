@@ -5,7 +5,8 @@ import Header from './components/Header/Header';
 import CharacterSearch from './components/CharacterSearch/CharacterSearch';
 import RandomCharacter from './components/RandomCharacter/RandomCharacter';
 
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
 
 function App() {
   return (
