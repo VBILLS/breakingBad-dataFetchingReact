@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import './RandomCharacter.styles.css';
+import Card from 'react-bootstrap/Card';
+
+import './RandomCharacter.styles.scss';
 
 function RandomCharacter() {
   const [name, setName] = useState('');
@@ -28,20 +30,18 @@ function RandomCharacter() {
   }, []);
 
   return (
-    <div className='RandomCharacter-card'>
-      <h1 className='rc-Name'>{name}</h1>
-      <div className='rc-img'>
-        <img className='rc-img' src={imgsrc} alt='chacter' width='400px' />
-      </div>
-      <div className='rc-info'>
-        <p className='rc-occ'>
-          Occupation:<span>{occ}</span>
-        </p>
-        <p className='rc-stat'>
-          Status: <span>{stat}</span>
-        </p>
-      </div>
-    </div>
+    <Card
+      style={{ width: '18rem', backgroundColor: '#4f4563', color: '#fdffeb' }}
+      className='RandomCharacter-card'
+    >
+      <Card.Title className='rc-Name'>{name}</Card.Title>
+      <Card.Img className='rc-img' src={imgsrc} alt='chacter' />
+      <Card.Text className='rc-info'>
+        Occupation:<span>{occ}</span>
+        <br />
+        Status: <span>{stat}</span>
+      </Card.Text>
+    </Card>
   );
 }
 

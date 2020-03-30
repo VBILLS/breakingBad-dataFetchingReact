@@ -1,0 +1,29 @@
+.RandomCharacter-card {
+  margin: 6px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.356);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.356);
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  max-width: 300px;
+  max-height: 400px;
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .rc-img {
+    width: 80%;
+    max-height: 250px;
+    align-self: center;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .rc-info {
+    padding: 5px;
+
+    & span {
+      font-weight: bold;
+    }
+  }
+}
