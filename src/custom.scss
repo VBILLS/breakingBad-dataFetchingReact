@@ -1,6 +1,22 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/_mixins';
+
+$blue: #829df3;
+$indigo: #9b84ff;
+$lpurple: #b27af3;
+$lpink: #f085b7;
+// $red:     #dc3545 !default;
+// $orange:  #fd7e14 !default;
+// $yellow:  #ffc107 !default;
+// $green:   #28a745 !default;
+// $teal:    #20c997 !default;
+// $cyan:    #17a2b8 !default;
+
 $theme-colors: (
-  primary: #7e69ca,
-  card-bg: #664499
+  'brand': #574180,
+  'primary': $purple,
+  'secondary': $lpurple,
 );
 
 @import '~bootstrap/scss/bootstrap';

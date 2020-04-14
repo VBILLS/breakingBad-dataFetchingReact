@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+
 import './Header.styles.scss';
 
 function Header() {
   return (
     <Navbar
       collapseOnSelect
-      expand='lg'
+      expand='md'
       className='header'
-      bg='primary'
-      variant='light'
+      bg='brand'
+      variant='dark'
     >
       <Navbar.Brand className='header-title'>Breaking Bad Api</Navbar.Brand>
       <Navbar.Toggle aria-controls='responsive-navbar-nav' />
@@ -20,33 +20,38 @@ function Header() {
         <Nav className='mr-auto'>
           <NavDropdown
             title='Characters'
-            href='/characters'
             id='collasible-nav-dropdown-characters'
           >
-            <NavDropdown.Item as={Link} href='/characters/search'>
+            <NavDropdown.Item href='/characters'>Main</NavDropdown.Item>
+            <NavDropdown.Item href='/characters/search'>
               Search
             </NavDropdown.Item>
             <NavDropdown.Item href='/characters/random'>
               Random
             </NavDropdown.Item>
           </NavDropdown>
-          <NavDropdown
+          <Nav.Link
             title='Episodes'
             href='/episodes'
             id='collasible-nav-dropdown-wpisodes'
           >
-            <NavDropdown.Item href='#'></NavDropdown.Item>
-          </NavDropdown>
-          <NavDropdown
+            Episodes
+          </Nav.Link>
+          <Nav.Link
             title='Quotes'
             id='collasible-nav-dropdown-quotes'
-          ></NavDropdown>
-          <NavDropdown title='Deaths' id='collasible-nav-dropdown-deaths'>
-            <Nav.Link href='#deets'>More deets</Nav.Link>
-            <Nav.Link eventKey={2} href='#memes'>
-              Dank memes
-            </Nav.Link>
-          </NavDropdown>
+            href='/quotes'
+          >
+            Quotes
+          </Nav.Link>
+
+          <Nav.Link
+            title='Deaths'
+            href='/deaths'
+            id='collasible-nav-dropdown-deaths'
+          >
+            Deaths
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

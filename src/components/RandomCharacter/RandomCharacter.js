@@ -17,14 +17,14 @@ function RandomCharacter() {
       );
       res
         .json()
-        .then(res => {
+        .then((res) => {
           res = res[0];
           setName(res.name);
           setImgsrc(res.img);
           setOcc(res.occupation);
           setState(res.status);
         })
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     }
     fetchData();
   }, []);
